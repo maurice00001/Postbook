@@ -12,6 +12,9 @@
  *= require_tree .
  */
 body {
-    padding         : 40px;
+    padding         : 50px;
     padding-bottom  : 0;
+}
+.alert {
+    margin-top      : 10px;
 }
