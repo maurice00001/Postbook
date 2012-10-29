@@ -6,7 +6,7 @@
 
 <% @posts.each do |post| %>
 <div class="status">
-  <strong><%= post.name %></strong>
+  <strong><%= post.user.full_name %></strong>
   <p><%= post.content %></p>
   <div class="meta">
    <%= link_to time_ago_in_words(post.created_at) + " ago", post %>
