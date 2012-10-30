@@ -2,7 +2,9 @@
 <h1>Alle Posts</h1>
 </div>
 
-<%= link_to "Nieuwe post", new_post_path, class:"btn btn-success" %>
+<div class="page-header">
+  <h2><%= link_to "Nieuwe post", new_post_path, class:"btn btn-success" %></h2>
+</div>
 
 <% @posts.each do |post| %>
 <div class="status">
@@ -11,8 +13,8 @@
   <div class="meta">
    <%= link_to time_ago_in_words(post.created_at) + " ago", post %>
     <span class="admin">
-       | <%= link_to "Edit", edit_post_path(post) %> |
-       <%= link_to "Delete", post, method: :delete, data: { confirm: "Weet je het zeker?"} %>
+       <%= link_to raw('<i class="icon-edit"></i>'), edit_post_path(post) %></a>
+       <%= link_to raw('<i class="icon-trash"></i>'), post, method: :delete, data: { confirm: "Weet je het zeker?"} %>
     </span>
   </div>
 </div>
